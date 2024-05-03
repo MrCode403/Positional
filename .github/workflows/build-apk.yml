@@ -30,7 +30,7 @@ jobs:
       - name: Build release apk
         uses: eskatos/gradle-command-action@v3
         with:
-          arguments: assembleRelease
+          arguments: assembleFullRelease
           distributions-cache-enabled: true
           dependencies-cache-enabled: true
           configuration-cache-enabled: true
@@ -40,5 +40,5 @@ jobs:
         
         with:
           name: app-full-release
-          path: app/build/outputs/apk/release
+          path: app/build/outputs/apk/release/app-full-release.apk
           
