@@ -20,14 +20,17 @@ class LauncherActivity : BaseActivity(), LicenceStatusCallback {
 
         setContentView(R.layout.activity_launcher)
 
-        if (getLicenceStatus() || BuildConfig.FLAVOR == "lite" || BuildConfig.DEBUG) {
+        onLicenseCheckCompletion()
+        
+        /*if (getLicenceStatus() || BuildConfig.FLAVOR == "lite" || BuildConfig.DEBUG) {
             onLicenseCheckCompletion()
         } else {
+            onLicenseCheckCompletion()
             supportFragmentManager.beginTransaction()
                     .setCustomAnimations(R.anim.dialog_in, R.anim.dialog_out)
                     .replace(R.id.launcher_act, License.newInstance(), "license")
                     .commit()
-        }
+        }*/
     }
 
     private fun setShortcutScreen() {
